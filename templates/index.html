@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>
+	this is the object itself {{object1.first_name}}
+	</h1>
+	
+	<h1>
+	this is the first name   {{first_name}}
+	</h1>
+	
+	<h1>
+	this is the last name {{last_name}}
+	</h1>
+
+	<h2>  the modify one {{object1.first_name}}  </h2>
+		
+	<h1>hello world</h1>
+
+
+
+	{% for x in objects%}
+
+		<a href="{{x.id}}" style="text-decoration:none; font-family: sans-serif;">
+			if you wanna know the details of the student: {{x.first_name}} Click on me 
+		</a><br>
+
+
+	{% endfor %}
+
+
+
+	<form action="search">
+		
+		<input type="text" name="q"><br>
+		<input type="submit">
+	</form>
+
+
+	 </body>
+	
+</html>

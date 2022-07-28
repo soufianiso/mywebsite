@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+</head>
+<body>
+
+	{{ form }}
+
+	{% if not request.user.is_authenticated%}
+
+	<form action = "." method="POST"> {% csrf_token %}
+ 		
+ 		
+
+		{% if error %}
+
+			<p style="color: red;">{{error}}</p>
+
+		{% endif %}
+		
+		
+
+		<span>username: </span>
+		<input type="text" name="username">
+		<span>password: </span>
+		<input type="password" name="password">
+
+		<input type="submit">
+
+		
+
+	</form>
+	
+	
+	{% else %}
+		<h1>you are already logged in would you like to logout? click here</h1>
+
+		<a href="/logout">logout</a>
+
+
+	{% endif %}
+</body>
+</html>
