@@ -72,4 +72,4 @@ def register_view(request):
 
 
 
-coucou
+hello world
